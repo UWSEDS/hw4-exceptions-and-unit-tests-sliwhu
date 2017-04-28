@@ -55,6 +55,7 @@ class TestMethods(unittest.TestCase):
 		except:
 			pass
 
+	#test remove file if file not exist
 	def test_RemoveLocalnotPresent(self):
 		print ('test_RemoveLocalnotPresent: ')
 		filename='4xy5-26gy.csv'
@@ -65,6 +66,7 @@ class TestMethods(unittest.TestCase):
 		test_url='https://data.seattle.gov/resource/4xy5-26gy.csv'
 		self.assertEqual(remove_data(test_url), 304) 
 	
+	#test remove file is url invalid
 	def test_RemoveurlInvalid(self):
 		print ('test_RemoveurlInvalid: ')
 		test_url='http://invalid'
